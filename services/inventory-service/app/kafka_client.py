@@ -7,7 +7,7 @@ def create_consumer():
     return Consumer({
         "bootstrap.servers": BOOTSTRAP,
         "group.id": "inventory-service",
-        "auto.offset.reset": "earliest",  # 👈 REQUIRED
+        "auto.offset.reset": "earliest", 
         "enable.auto.commit": True
     })
 
