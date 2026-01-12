@@ -29,7 +29,7 @@ def main():
         inv = Inventory(
             order_id=event["orderId"],
             item=event["item"],
-            quantity=event["quantity"],   # ✅ FIXED
+            quantity=event["quantity"],   
             status="RESERVED"
         )
 
