@@ -90,6 +90,13 @@ services:
       DATABASE_URL: postgresql+psycopg2://app:app@postgres:5432/appdb
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
 
+  spark-streaming:
+    build: ./services/spark-streaming
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      ORDER_TOPIC: orders
 
 volumes:
   pgdata:
